@@ -9,7 +9,7 @@ This project provides a Docker Compose setup for running a Webtop container. Web
 
 ### Usage
 
-1.  **Copy the `.env.example` file to `.env` and update the variables:**
+1.  **Copy the `.env` and update the variables:**
     -   Edit the `.env` file according to your needs. Refer to the descriptions below for each variable.
 2.  **Start the container:**
     -   Run `docker-compose up -d` to start the container in detached mode.
@@ -26,7 +26,6 @@ The `.env` file stores sensitive configuration data for the container. Here's a 
 -   `USER`: Username for Webtop login (optional).
 -   `PASSWORD`: Password for Webtop login (optional).
 
-**Important:** It's recommended to set `USER` and `PASSWORD` for enhanced security. Leaving them blank might expose the container to unauthorized access.
 
 ### Flavor Selection
 
