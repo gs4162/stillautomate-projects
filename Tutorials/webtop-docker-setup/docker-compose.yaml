@@ -1,0 +1,17 @@
+services:
+  webtop:
+    image: ${FLAVOR} # Use the FLAVOR variable from the .env file
+    container_name: webtop
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - USER=${USER}
+      - PASSWORD=${PASSWORD}
+    volumes:
+      - ${VOLUME_PATH}:/config # Use the VOLUME_PATH variable from the .env file
+      # - /var/run/docker.sock:/var/run/docker.sock # Optional only if you need access to Docker within this container
+    ports:
+      - 3000:3000
+    shm_size: "3gb" # Set to 1GB or higher to prevent browser crashes
+    restart: unless-stopped
